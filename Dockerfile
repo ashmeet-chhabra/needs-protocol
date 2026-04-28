@@ -4,8 +4,8 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 COPY package*.json ./
-COPY tsconfig.json .
-COPY tsconfig.server.json .
+COPY tsconfig.json ./
+COPY tsconfig.server.json ./
 COPY server ./server
 
 # Install ALL dependencies (including dev) to compile TypeScript
@@ -31,9 +31,9 @@ COPY --from=builder /app/dist ./dist
 ENV PORT=8080
 EXPOSE 8080
 
-# Health check (optional but recommended)
+# Health check (fixed path to /api/health and using fetch for Node 18+)
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:8080/health', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"
+  CMD node -e "fetch('http://localhost:8080/api/health').then(r => { if (!r.ok) process.exit(1); }).catch(() => process.exit(1))"
 
 # Start the compiled server
 CMD ["node", "dist/server/index.js"]
