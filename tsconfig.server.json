@@ -3,7 +3,11 @@
   "compilerOptions": {
     "lib": ["ES2022"],
     "types": ["node"],
-    "allowJs": false
+    "allowJs": false,
+    "outDir": "./dist",
+    "noEmit": false,
+    "module": "commonjs",
+    "target": "ES2020"
   },
   "include": ["server"]
 }
