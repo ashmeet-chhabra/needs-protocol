@@ -7,6 +7,7 @@
     "outDir": "./dist",
     "rootDir": ".",
     "noEmit": false,
+    "allowImportingTsExtensions": false,
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "target": "ES2022",

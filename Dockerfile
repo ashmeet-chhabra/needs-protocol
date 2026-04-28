@@ -1,5 +1,5 @@
 # Build stage: Install dependencies and compile TypeScript
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ RUN npm ci
 RUN npx tsc --project tsconfig.server.json
 
 # Production stage: Lightweight runtime
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
