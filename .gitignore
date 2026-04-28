@@ -1,0 +1,45 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor folders and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Firebase and Deployment
+.firebase/
+.firebaserc
+
+# Build outputs
+dist/
+dist-ssr/
+
+# Docker
+docker-compose.override.yml
+
+# Cloud Run / GCP
+.gcloudignore
+.env.production
+
+slide-deck.txt
+demo-script.txt

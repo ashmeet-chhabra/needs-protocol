@@ -1,0 +1,19 @@
+# .dockerignore specifies files NOT to include in Docker image
+
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+.env
+.env.*
+.vscode
+.idea
+dist
+dist-ssr
+.DS_Store
+Thumbs.db
+slide-deck.txt
+demo-script.txt
+.firebase
+.firebaserc

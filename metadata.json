@@ -1,0 +1,6 @@
+{
+  "name": "Needs Protocol",
+  "description": "A smart resource allocation prototype for the Solution Challenge, using Gemini AI to extract community needs and match them with volunteers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
